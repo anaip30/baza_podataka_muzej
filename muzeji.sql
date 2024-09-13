@@ -88,7 +88,7 @@ CREATE TABLE ZAPOSLENIK (
     PLACA DECIMAL(10, 2),
     ID_ODJEL INTEGER  NOT NULL,
     FOREIGN KEY (ID_ODJEL) REFERENCES ODJEL(ID),
-    CHECK (RADNO_MJESTO IN ('Cistacica', 'Zastitar', 'Znanstvenik', 'Vodić', 'Pomocni poslovi')), 
+    CHECK (RADNO_MJESTO IN ('Cistacica', 'Zastitar', 'Znanstvenik', 'Vodić', 'Prodavac karata')), 
     CHECK (DATUM_ZAPOSLENJA >=  SYSDATE()  - INTERVAL 50 YEAR), 
     CHECK (PLACA BETWEEN 25000 AND 80000)
 );
